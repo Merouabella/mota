@@ -1,0 +1,31 @@
+﻿/*
+ Theme Name:   motachildZ
+ Theme URI:    http://www.google.fr/
+ Author:       Zou
+ Author URI:   http://www.google.fr/
+ Text Domain:  motachildZ
+
+*/
+
+// import des fonts google
+@import "partiels/fontGoogle";
+
+//variables globale
+:root{
+
+}
+
+// import des mixins
+@import "mixins/keyframes";
+
+// import des partiels
+@import "partiels/header";
+@import "partiels/footer";
+@import "partiels/body";
+@import "partiels/modale";
+@import "partiels/formulaire";
+@import "partiels/block";
+@import "partiels/single";
+@import "partiels/lightbox";
+@import "partiels/selecteur";
+

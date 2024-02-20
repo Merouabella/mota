@@ -11,7 +11,11 @@
         );
         ?>
         
-       
+        <?php get_template_part('template-parts/modale'); ?>
+        
+        <!-- Appel de la lightBox -->
+        <?php get_template_part('template-parts/lightbox'); ?>
+        
 
 </nav>
     
