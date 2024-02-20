@@ -1,5 +1,13 @@
 <?php
 
+function theme_enqueue_styles(){
+    // Chargement du style.css du theme
+    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/style.css'));
+
+}
+
+// Action qui permet de charger des scripts dans notre theme
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
 
 
