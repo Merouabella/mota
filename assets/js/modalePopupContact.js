@@ -3,7 +3,7 @@
 console.log("Affichage modale Contact : son js est chargé");
 
 $(document).ready(function() {
-    const lienContact = $('#menu-item-09');
+    const lienContact = $('#menu-item-60');
     const boutonContact = $('#boutonContact');
     const modalOverlay = $('.popup-overlay');
     const referencePhoto = $('#referencePhoto');
