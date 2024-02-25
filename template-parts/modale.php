@@ -1,4 +1,4 @@
-<button id="open-contact-popup">Ouvrir la modale de contact</button>
+
 <div class="popup-overlay">
 	<div  class="popup-contact">
 	   

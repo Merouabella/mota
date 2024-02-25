@@ -3,7 +3,7 @@
     var overlay = $('.popup-overlay');
 
     // Ouvrir la modale lorsque le bouton est cliqué
-    $('#open-contact-popup').click(function() {
+    $('#menu-item-9').click(function() {
         popup.show();
         overlay.show();
     });
