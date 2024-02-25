@@ -21,4 +21,11 @@
             overlay.hide();
         }
     });
+
+    // Préremplir le champ "Réf. photo" dans la popup avec la référence de la photo actuelle
+    $('#boutonContact').click(function() {
+        var reference = $('#single-reference').text();
+        $('#reference-photo').val(reference);
+        $('#photo-modal').modal('show');
+    });
 });
