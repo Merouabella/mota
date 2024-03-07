@@ -16,8 +16,10 @@ $REFERENCE = strtoupper (get_field('reference'));
 $type = get_field('type');
 
 // Taxo
-// $annees = get_the_terms(get_the_ID(), 'annees');
-$year = get_field('annee');
+ $annees = get_the_terms(get_the_ID(), 'date');
+//$year = get_field('annee');
+
+
 
 $categories = get_the_terms(get_the_ID(), 'categorie');
 $formats = get_the_terms(get_the_ID(), 'format');
@@ -34,6 +36,7 @@ $nextThumbnailURL = $nextPost ? get_the_post_thumbnail_url($nextPost->ID, 'thumb
 <section class="cataloguePhotos">
     <div class="galleryPhotos" >
         <div class="detailPhoto">
+			
 
             <div class="containerPhoto">
                      <img   src="<?php echo $photo_url; ?>" alt="<?php the_title_attribute(); ?>">
@@ -48,19 +51,28 @@ $nextThumbnailURL = $nextPost ? get_the_post_thumbnail_url($nextPost->ID, 'thumb
                 <h2><?php echo get_the_title(); ?></h2>
 
                 <div class="taxonomies">
-
-                        <p>RÉFÉRENCE : <span id="single-reference"><?php echo strtoupper($reference) ?></span></p>
-                        <p>CATÉGORIE : <?php foreach ($categories as $key => $cat) {
-                                            $categoryNameSingle = $cat->name;
-                                            echo strtoupper($categoryNameSingle);
-                                        }  ?></p>
-                        <p>FORMAT : <?php foreach ($formats as $key => $format) {
-                                        $formatName = $format->name;
-                                        echo strtoupper($formatName);
-                                    } ?></p>
-                        <p>TYPE : <?php echo strtoupper($type) ?> </p>
-                        <p>ANNÉE : <?php echo $year ?> </p>
-                </div>
+    <p>RÉFÉRENCE : <span id="single-reference"><?php echo strtoupper($reference) ?></span></p>
+    <p>CATÉGORIE : <?php foreach ($categories as $key => $cat) {
+                                        $categoryNameSingle = $cat->name;
+                                        echo strtoupper($categoryNameSingle);
+                                    }  ?></p>
+    <p>FORMAT : <?php foreach ($formats as $key => $format) {
+                                    $formatName = $format->name;
+                                    echo strtoupper($formatName);
+                                 } ?></p>
+    <p>TYPE : <?php echo strtoupper($type) ?> </p>
+    <p>ANNEES : <?php
+                    if (!empty($annees)) {
+                        $anneeNames = array();
+                        foreach ($annees as $annee) {
+                            $anneeNames[] = $annee->name;
+                        }
+                        echo implode(', ', $anneeNames);
+                    } else {
+                        echo 'N/A';
+                    }
+                ?> </p>
+</div>
             </div>
         </div>
     </div>

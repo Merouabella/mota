@@ -28,6 +28,7 @@ get_header();
 		<section id="containerPhoto" class="blockCatalogue">
 					<?php get_template_part('template-parts/photo-container'); ?>
 		</section>
+		
 
     <script>
         var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
