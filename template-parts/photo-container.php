@@ -1,3 +1,4 @@
+
 <?php
      // Récupération de 12 photos aléatoires pour le bloc initial
           $args = array(

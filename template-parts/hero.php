@@ -1,20 +1,32 @@
-<div class="banner">
-    <h1>Photographe event</h1>
-    <?php
-    $photo_args = array(
-        'post_type' => 'photos',
-        'posts_per_page' => 1,
-        'orderby' => 'rand',
-    );
+<?php
+$args = array(
+    'post_type' => 'photos', // Type de publication : articles
+    'posts_per_page' => 2, // Nombre d'articles à afficher
+    'orderby' => 'rand', // Tri aléatoire
+);
 
-    $photo_query = new WP_Query($photo_args);
+$random_posts_query = new WP_Query($args);
 
-    if ($photo_query->have_posts()) {
-        while ($photo_query->have_posts()) {
-            $photo_query->the_post();
-            echo '<div class="hero-image" style="background-image: url(' . wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0] . ');"></div>';
+if ($random_posts_query->have_posts()) {
+    while ($random_posts_query->have_posts()) {
+        $random_posts_query->the_post();
+
+        // Affichage du titre de l'article
+        the_title('<h2>', '</h2>');
+
+        // Affichage de l'image en vedette de l'article
+        if (has_post_thumbnail()) {
+            the_post_thumbnail('large');
+        } else {
+            echo 'Aucune image en vedette';
         }
-        wp_reset_postdata();
+
+        echo '<p>PHOTOGRAPH EVENT</p>'; // Titre supplémentaire pour chaque photo
+
+        // Autres contenus de l'article
+        the_excerpt();
     }
-    ?>
-</div>
+} else {
+    echo 'Aucun article trouvé.';
+}
+?>

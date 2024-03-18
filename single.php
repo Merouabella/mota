@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage motachildZ
- * @since motachildZ
+ * @subpackage mota
+ * @since mota
  */
 
 get_header();

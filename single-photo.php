@@ -15,15 +15,33 @@ $reference = get_field('reference');
 $REFERENCE = strtoupper (get_field('reference'));
 $type = get_field('type');
 
-// Taxo
- $annees = get_the_terms(get_the_ID(), 'date');
-//$year = get_field('annee');
+//TAXO
+// Récupération des années
+$annees = get_the_terms(get_the_ID(), 'annee');
 
+// Vérification si $annees est valide avant d'accéder à ses éléments
+if (!empty($annees) && !is_wp_error($annees)) {
+    // Accéder aux éléments de $annees si elle n'est pas vide
+}
 
-
+// Récupération des catégories
 $categories = get_the_terms(get_the_ID(), 'categorie');
+
+// Vérification si $categories est valide avant d'accéder à ses éléments
+if (!empty($categories) && !is_wp_error($categories)) {
+    $categorie_name = $categories[0]->name;
+}
+
+// Récupération des formats
 $formats = get_the_terms(get_the_ID(), 'format');
-$categorie_name = $categories[0]->name;
+
+// Vérification si $formats est valide avant d'accéder à ses éléments
+if (!empty($formats) && !is_wp_error($formats)) {
+    // Accéder aux éléments de $formats si elle n'est pas vide
+}
+
+// Votre code existant continue ici...
+
 
 // Définissez les URLs des vignettes pour le post précédent et suivant
 $nextPost = get_next_post();
@@ -47,7 +65,7 @@ $nextThumbnailURL = $nextPost ? get_the_post_thumbnail_url($nextPost->ID, 'thumb
                           </div>
             </div>
 
-            <div class="selecteurK">
+			<div class="selecteurK">
                 <h2><?php echo get_the_title(); ?></h2>
 
                 <div class="taxonomies">
@@ -84,6 +102,27 @@ $nextThumbnailURL = $nextPost ? get_the_post_thumbnail_url($nextPost->ID, 'thumb
     	</div>
 
     	<div class="naviguationPhotos">
+
+      	<!-- Conteneur pour la miniature -->
+      	<div class="miniPicture" id="miniPicture">
+      	  <!-- La miniature sera chargée ici par JavaScript -->
+      	</div>
+
+		  <div class="naviguationPhotos">
+
+<!-- Conteneur pour la miniature -->
+<div class="miniPicture" id="miniPicture">
+  <!-- La miniature sera chargée ici par JavaScript -->
+</div>
+
+<div class="naviguationPhotos">
+
+      	<!-- Conteneur pour la miniature -->
+      	<div class="miniPicture" id="miniPicture">
+      	  <!-- La miniature sera chargée ici par JavaScript -->
+      	</div>
+
+      	<div class="naviguationPhotos">
 
       	<!-- Conteneur pour la miniature -->
       	<div class="miniPicture" id="miniPicture">

@@ -3,7 +3,7 @@
 $taxonomy = [
     'categorie' => 'CATÉGORIES',
     'format' => 'FORMATS',
-    'date' => 'TRIER PAR',
+    'annee' => 'TRIER PAR',
 ];
 
 foreach ($taxonomy as $taxonomy_slug => $label) {
@@ -14,10 +14,9 @@ foreach ($taxonomy as $taxonomy_slug => $label) {
 
         echo "<option value=''>$label</option>";
         foreach ($terms as $term) {
-            echo "<option value='$term->slug'>$term->name</option>";
+            echo "<option value='{$term->slug}'>{$term->name}</option>";
         }
         echo "</select>";
     }
 }
 ?>
-
