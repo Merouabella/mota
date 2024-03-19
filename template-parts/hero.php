@@ -1,7 +1,7 @@
 <?php
 $args = array(
     'post_type' => 'photos', // Type de publication : articles
-    'posts_per_page' => 2, // Nombre d'articles à afficher
+    'posts_per_page' => 1, // Nombre d'articles à afficher
     'orderby' => 'rand', // Tri aléatoire
 );
 
@@ -29,4 +29,5 @@ if ($random_posts_query->have_posts()) {
 } else {
     echo 'Aucun article trouvé.';
 }
+
 ?>
