@@ -1,6 +1,6 @@
 
 
-/* CSS pour le Header */
+/*  debut CSS pour le Header */
 
 header {
 
@@ -12,7 +12,7 @@ header {
     box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
 
     /* Barre de navigation */
-    .siteNavigation {
+    .lienNav {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -35,7 +35,7 @@ header {
             display: flex;
             align-items: center;
 
-            .menuNavigation {
+            .NavBarre {
                 list-style-type: none ;
                 display: flex;
                 gap: 30px;
@@ -87,7 +87,7 @@ header {
             }
         }
 
-        .siteNavigation {
+        .lienNav {
 
             .burgerMenu {
                 width: 30px;
@@ -134,7 +134,7 @@ header {
                     height: 100vh;
                 }
 
-                .menuNavigation {
+                .NavBarre {
                     flex-direction: column;
                     gap: 18px;
                     height: 600px;
@@ -163,3 +163,4 @@ header {
         padding-inline: 55px;
 }
 }
+/*  fin CSS pour le Header */

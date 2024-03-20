@@ -1,7 +1,7 @@
 
 /* CSS pour le Footer */
 
-.cssFooter {
+.MenuFooter {
     display: flex;
     justify-content: center;
     border-top: 1px solid black;
@@ -11,7 +11,7 @@
 
 @media (max-width: 770px){
    
-    .cssFooter {
+    .MenuFooter {
         display: flex;
         gap: 18px;
         flex-direction: column;

@@ -1,6 +1,6 @@
 
 /* Lightbox Ouverture et Fermeture */
-console.log("Lightbox Ouverture et Fermeture : son js est chargé");
+/*console.log("Lightbox Ouverture et Fermeture : son js est chargé");
 
 $(document).ready(function() {
     var $lightbox = $('#lightbox');

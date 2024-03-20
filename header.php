@@ -11,7 +11,7 @@
 <?php wp_body_open(); ?>
 
 	<header class="site-header">
-		<nav id="site-navigation" class="siteNavigation" role="navigation">
+		<nav id="site-navigation" class="lienNav" role="navigation">
 			<div class="logo">
 				<a href="<?php echo home_url('/'); ?>">
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Logo.png'; ?>" alt="Logo">
@@ -31,7 +31,7 @@
 					array(
 						'theme_location' => 'menu-1',
 						'container'      => 'false',
-						'menu_class'     => 'menuNavigation',
+						'menu_class'     => 'NavBarre',
 					)
 				);
 				?>

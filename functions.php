@@ -16,10 +16,10 @@ add_action( 'wp_enqueue_scripts', 'librairie_JQuery' );
 function script_JS_Custo() {
 
     // Gestion de la Modale (script JQuery)
-    wp_enqueue_script('ModaleJS', get_stylesheet_directory_uri() . '/assets/js/modalePopupContact.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('ModaleJS', get_stylesheet_directory_uri() . '/assets/js/modale.js', array('jquery'), '1.0.0', true);
 
     // Bibliotheque Select2 pour les selects de tri
-    wp_enqueue_script('select2-js', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js', array('jquery'), '4.0.13', true);
+   /* wp_enqueue_script('select2-js', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js', array('jquery'), '4.0.13', true);
     wp_enqueue_style('select2-css', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css', array());
 
     // Gestion du Menu Burger (script JQuery)
@@ -44,7 +44,7 @@ function script_JS_Custo() {
 add_action( 'wp_enqueue_scripts', 'script_JS_Custo' );
 
 // Astuce pour éviter d'avoir des <p> partout dans CF7
-add_filter('wpcf7_autop_or_not', '__return_false');
+add_filter('wpcf7_autop_or_not', '__return_false');*/
 
 function enregistrement_nav_menus() {
 
@@ -59,7 +59,7 @@ add_action( 'after_setup_theme', 'enregistrement_nav_menus' );
 
 /* Chargement photos Ajax load more */
 
-function load_more_photos() {
+/*function load_more_photos() {
     $paged = $_POST['page'] + 1;
     $query_vars = json_decode(stripslashes($_POST['query']), true);
     $query_vars['paged'] = $paged;
@@ -90,7 +90,7 @@ add_action('wp_ajax_load_more', 'load_more_photos');
 
 /* Filtres */
 
-function filter_photos_function(){
+/*function filter_photos_function(){
 
     $filter = $_POST['filter'];
 

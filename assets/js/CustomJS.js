@@ -1,7 +1,7 @@
 
 //* Déclarer la bibliothèque select2 pour custom les selects du formulaire de ti
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $('.taxonomy-select').select2({
         dropdownPosition: 'below',
         

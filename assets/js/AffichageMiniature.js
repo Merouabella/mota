@@ -1,6 +1,6 @@
 
 /* Affichage Miniature */
-console.log("Affichage Miniature : son js est chargé");
+/*console.log("Affichage Miniature : son js est chargé");
 
 $(document).ready(function() {
     const miniPicture = $('#miniPicture');

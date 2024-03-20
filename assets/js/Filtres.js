@@ -1,6 +1,6 @@
 
 /* les Filtres */
-console.log("les Filtres : son js est chargé");
+/*console.log("les Filtres : son js est chargé");
 
 (function($){
 

@@ -1,1 +1,0 @@
-jQuery(document).ready((function($){var o=$(".popup-contact"),c=$(".popup-overlay");$("#open-contact-popup").click((function(){o.show(),c.show()})),$(".popup-close").click((function(){o.hide(),c.hide()})),$(document).mouseup((function(p){p.target==c[0]&&(o.hide(),c.hide())}))}));
